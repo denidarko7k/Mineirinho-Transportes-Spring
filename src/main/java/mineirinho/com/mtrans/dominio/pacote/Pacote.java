@@ -7,6 +7,7 @@ import java.util.UUID;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -28,8 +29,8 @@ public class Pacote {
     private String cpf;
     private String remetente;
     private String destinatario;
-    private int idrastreio;
-    @OneToMany(mappedBy = "pacote", cascade = CascadeType.ALL, orphanRemoval = true)
+    private String idrastreio;
+    @OneToMany(mappedBy = "pacote", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Registro> locais = new ArrayList<>();
     @Override
     public boolean equals(Object obj){
@@ -58,6 +59,12 @@ public class Pacote {
         }
 
 
+    }
+    public List<Registro> getLocais(){
+        return locais;
+    }
+    public void setRegistros(List<Registro> locais){
+        this.locais = locais;
     }
     //INSERIR d no FORMATO DD/MM/AAAA ex 12042025
     public void addReg(Registro registro){

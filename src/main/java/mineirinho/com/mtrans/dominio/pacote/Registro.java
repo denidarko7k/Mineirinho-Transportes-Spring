@@ -9,7 +9,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -39,9 +38,12 @@ public class Registro {
         return this.local;
     }
 
+
     @ManyToOne
     @JoinColumn(name = "pacote_id")
-
     private Pacote pacote;
+    public void setPacote(Pacote pacote) {
+        this.pacote = pacote;
+    }
 
 }
