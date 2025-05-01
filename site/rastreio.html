@@ -1,0 +1,110 @@
+<html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <title>Rastreio | Caipilog</title>
+    <style>
+
+        /* estilo geral */
+        html, body {
+            height: 100%;
+          }
+        
+        body {
+            padding-top: 100px;
+            font-family: Arial, sans-serif;
+            background-color: #fffaf0;
+            text-align: center;
+        }
+
+        /* header=faixa laranja */
+        header{
+            background-color: #d16b29;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            height: 50px;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            margin-right: 15px;
+        
+        }
+
+         header img {
+            height: 65px;
+            width: auto;
+            
+        }
+
+         nav {
+            margin-left: auto;
+            padding: 0 60px;
+        }
+
+        nav a {
+            display: inline-block;
+            background-color: #04874c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            margin-left: 15px;
+            transition: 0.3s;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+
+        /* quando o mouse passa encima dos botões*/
+        nav a:hover {
+            background-color: #036f3e;
+            transform: scale(1.05);
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            width: 300px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #d16b29;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        button:hover {
+            background-color: #a94f1c;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <img src="caipira.png" alt="Logo de uma empresa de logística"> 
+    <nav>
+        <a href="caipilog.html">Inicio</a>
+        <a href="#">Sobre nós</a>
+        <a href="rastreio.html">Rastreie seu pedido</a>
+        <a href="#">Contato</a>
+    </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <h1>Rastreie seu pedido</h1>
+    <p>Digite o código de rastreio abaixo</p>
+    <input type="text" placeholder="Código de rastreio">
+    <button>Rastrear</button>
+
+</body></html>
