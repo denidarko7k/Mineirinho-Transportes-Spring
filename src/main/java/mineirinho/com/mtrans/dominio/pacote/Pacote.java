@@ -44,7 +44,7 @@ public class Pacote {
         }
         
     }
-    public Pacote(String cpf, String destinatario, int idrastreio){
+    public Pacote(String cpf, String destinatario, String idrastreio){
         this.cpf= cpf;
         this.destinatario = destinatario;
         this.idrastreio = idrastreio;
