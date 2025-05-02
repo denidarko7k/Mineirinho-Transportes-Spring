@@ -2,49 +2,46 @@
     <meta charset="UTF-8">
     <title>Contato | Caipilog</title>
     <style>
-
-        /* Estilo geral */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* estilo geral */
         html, body {
             height: 100%;
-        }
-
+          }
+        
         body {
-            display: flex;
-            flex-direction: column;
+            padding-top: 100px;
             font-family: Arial, sans-serif;
             background-color: #fffaf0;
-            color: #333;
+            text-align: center;
         }
 
-        /* Cabeçalho */
-        header {
+        /* header=faixa laranja */
+        header{
             background-color: #d16b29;
             padding: 15px 30px;
             display: flex;
             align-items: center;
-            height: 80px;
+            height: 50px;
             overflow: hidden;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            margin-right: 15px;
+        
         }
 
-        /* Logo */
-        header img {
+         header img {
             height: 65px;
             width: auto;
             
         }
- 
-        /* Div dos links navegaveis */
-        nav {
+
+         nav {
             margin-left: auto;
+            padding: 0 60px;
         }
-       
-        /* Links do cabeçalho */
+
         nav a {
             display: inline-block;
             background-color: #04874c;
@@ -59,27 +56,94 @@
             box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
         }
 
-        /* Quando passa o mouse pelos botões */
+        /* quando o mouse passa encima dos botões*/
         nav a:hover {
             background-color: #036f3e;
             transform: scale(1.05);
             box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
         }
-       
-        /* Rodapé */
-        footer {
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            width: 300px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
             background-color: #d16b29;
             color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        button:hover {
+            background-color: #a94f1c;
+        }
+
+        #contato {
+            background-color: ##fffaf0;
+            padding: 10px 10px;
             text-align: center;
+        }
+
+        #contato h2 {
+            font-size: 28px;
+            color: #d16b29;
+            margin-bottom: 20px;
+        }
+
+        .form-box {
+            background-color: #fff;
+            border: 2px solid #d16b29;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.);
+            text-align: left;
+        }
+            form input, form textarea{
+            width: 80%;
+            max-width: 400px;
             padding: 15px;
-            margin-top: auto;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 15px;         
+        }
+
+        form textarea {
+            resize: horizontal;
+        }
+
+        form button {
+            background-color: #d16b29;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .info-contato {
+            margin-top: 20px;
+            font-size: 15px;
+            color: #333;
         }
 
     </style>
 </head>
 <body>
 
-     <!-- Cabeçalho -->
+    <!-- Cabeçalho -->
     <header>
         <img src="caipira.png" alt="Logo de uma empresa de logística"> 
     <nav>
@@ -90,14 +154,28 @@
     </nav>
     </header>
 
-
-
-
-
-
-    <!-- Rodapé -->
-    <footer>
-        © 2025 Caipilog. Todos os direitos reservados.
-    </footer>
-
+    <!-- Conteúdo principal -->
+    <section id="contato">
+    <h2>Entre em contato conosco!</h2>
+    <p><b>Estamos aqui pra tirar dúvidas, receber sugestões ou ajudar com sua entrega.</b></p>
+    <div class="form-box">
+    <form>        
+    <h3>Nome: <input type="text" placeholder="Seu nome"> <h3>
+    <h3>E-mail: <input type="text" placeholder="Seu e-mail"> </h3>
+    <h3>Telefone (opcional): <input type="text" placeholder="Seu telefone (opcional)"> </h3>
+    <h3>Assunto: <input type="text" placeholder="Assunto"> </h3>
+    <h3>Mensagem: <input type="text" placeholder="Escreva sua mensagem aqui..."></h3>
+    <button>Enviar formulário</button>
+    </form>
+</div>
+</section>
+    <br>
+    <div class="info-contato">
+    <h1>Informações para contato direto</h1>
+    <h3> &#x1F4DE; Telefone/Whatsapp: (34) 4002-8922</h3>
+    <h3> &#x1F4E9; E-mail: contato@caipilog.com.br</h3>
+    <h3> &#x1F4CC; Endereço: Rua da Roça, 123 - Interior/MG</h3>
+    <h3> &#x1F550; Atendimento: Segunda a Domingo - 24 horas</h3>
+    </div>
+    </section>
 </body></html>
