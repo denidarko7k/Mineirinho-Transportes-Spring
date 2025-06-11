@@ -1,0 +1,231 @@
+/* === Estilo Geral === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+/* === Cabeçalho === */
+header {
+    background-color: #FFC700;
+    display: flex;
+    align-items: center;
+    height: 75px;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 900;
+}
+
+header img {
+    padding: 0px 15px;
+    height: 175px;
+    width: 175px;
+    width: auto;
+    border-radius: 50%;
+}
+
+nav {
+    margin-left: auto;
+    padding: 0 30px;
+}
+
+nav a {
+    display: inline-block;
+    background-color: #FFC700;
+    color: black;
+    padding: 10px 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: red;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+}
+
+/* === Conteúdo Principal === */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* === Formulários e inputs === */
+input, textarea {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    resize: horizontal;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #04874c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: #004f2c;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    transform: scale(1.05);
+}
+
+/* === Seção Contato === */
+#contato {
+    padding: 0px 0px;
+    text-align: center;
+
+}
+
+#contato h2 {
+    font-size: 30px;
+    color: #ED1C24;
+    margin-bottom: 10px;
+    margin-top: 70px;
+    margin-right: 610px;
+    text-align: 0 auto;
+} 
+
+#contato h1{
+    font-size:33px;
+    text-align: center;
+    
+}
+
+.form-box {
+    background-color: #ffe496;
+    border: 2px solid #ED1C24;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 400px;
+    font-size: 20px;
+    min-height: 450px;
+    margin-left: 250px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.form-box .campo {
+    font-weight: bold;
+    padding: 5px;
+}
+
+form button {
+    background-color: black;
+    display: flex;
+    color: white;
+    border: none;
+    padding: 15px 50px;
+    border-radius: 10px;
+    margin-top: 45px;
+    margin-left: 45px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: red;
+}
+
+.info-contato {
+    text-align: left;
+    margin-top: 150px;
+    font-size: 20px;
+    background-color: #FFC700;
+    width: 100%;
+    min-height: 360px;
+    color: #333; 
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+    position: relative;
+    justify-content: space-between;
+}
+
+.info_contato_texto {
+    font-size: 20px;
+    line-height: 2.4;
+    flex: 1;
+    color: black; 
+}
+
+/* === Rodapé === */
+footer {
+    background-color: #FFC700;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    margin-top: 0px;
+    margin-bottom: auto;
+}
+
+/* === Assets de imagem ===*/
+.garotacontato {
+    background-image: url('garota.jpg'); 
+    background-size: 187%;
+    background-position: 85% 0%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    padding-top: 0px;
+ }
+
+ .localizacao {
+    width: 300px;
+    position: absolute;
+    top: 75px;
+    right: 220px;
+ }
+
+ .localizacao img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10%;
+ }
+/* === Assets de fix === */
+.sem_footer footer{
+    display: none;
+}
