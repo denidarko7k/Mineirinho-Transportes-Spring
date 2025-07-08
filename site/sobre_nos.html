@@ -1,7 +1,203 @@
-<html lang="pt-BR"><head>
+<html lang="pt-BR">
+  <head>
     <meta charset="UTF-8">
     <title>Sobre nós ❤️ </title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+      /* === Estilo Geral === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+/* === Cabeçalho === */
+header {
+    background-color: #FFC700;
+    display: flex;
+    align-items: center;
+    height: 75px;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 900;
+}
+
+header img {
+    padding: 0px 15px;
+    height: 175px;
+    width: 175px;
+    width: auto;
+    border-radius: 50%;
+}
+
+nav {
+    margin-left: auto;
+    padding: 0 30px;
+}
+
+nav a {
+    display: inline-block;
+    background-color: #FFC700;
+    color: black;
+    padding: 10px 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: red;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+}
+
+/* === Conteúdo Principal === */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+/* === Rodapé === */
+footer {
+    background-color: #FFC700;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    margin-top: 0px;
+    margin-bottom: auto;
+}
+
+.sobre-nos {
+  background-image: url('fotochamativa.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.sobre-nos::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* === Camada escura por cima da imagem === */
+  z-index: 0;
+}
+
+.texto-glass {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.texto-glass h2 {
+  font-size: 2.2rem;
+  color: #fcd34d;
+  margin-bottom: 20px;
+}
+
+.texto-glass h3 {
+  font-size: 1.4rem;
+  color: #fbbf24;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.texto-glass p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.diferenciais {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.diferenciais li {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.final {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.cardapio {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #fcd34d;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn-cta:hover {
+  background-color: #fbbf24;
+}
+
+/* === Responsivo === */
+@media (max-width: 768px) {
+  .sobre-nos {
+    padding: 60px 10px;
+    align-items: flex-start;
+  }
+
+  .texto-glass {
+    padding: 30px 20px;
+    width: 100%;
+  }
+
+  .texto-glass h2 {
+    font-size: 2rem;
+  }
+}
+    </style>
 </head>
 <body>
 
@@ -16,14 +212,37 @@
     </nav>
     </header>
 
+<section class="sobre-nos">
+  <div class="texto-glass">
+    <h2>Sobre nós</h2>
+    <p>No <strong>Eu Amo Pastel</strong>, cada mordida conta uma história. Somos apaixonados por sabor, tradição e aquele carinho que só comida feita com amor consegue transmitir.</p>
 
+    <p>Desde o início, nosso propósito é oferecer uma experiência única com <strong>pastéis fresquinhos</strong>, <strong>massas exclusivas</strong>, <strong>caldo de cana natural</strong> e um atendimento que abraça.</p>
 
+    <h3>Nossa essência</h3>
+    <p>Trabalhamos com <strong>ingredientes selecionados</strong> e <strong>massas artesanais</strong>, garantindo qualidade e sabor em cada detalhe. Nosso ambiente é acolhedor, familiar e ideal para aproveitar bons momentos com amigos e família.</p>
 
+    <h3>Diferenciais</h3>
+    <ul class="diferenciais">
+      <li>✅ Pastéis doces e salgados com massa exclusiva</li>
+      <li>🍹 Caldo de cana, açaí e sucos naturais</li>
+      <li>📦 Entrega, retirada e pedidos no local</li>
+      <li>🕕 Funcionamento: terça a domingo, das 18h às 23h</li>
+    </ul>
 
+    <h3>Nosso compromisso</h3>
+    <p>Queremos que cada cliente se sinta em casa. Trabalhamos com dedicação todos os dias para entregar <strong>sabor</strong>, <strong>carinho</strong> e um atendimento que faz a diferença.</p>
+
+    <p class="final">💛 <strong>Obrigado por fazer parte da nossa história!</strong></p>
+
+    <a href="nossos_produtos.html" class="cardapio">CARDÁPIO</a>
+  </div>
+</section>
 
     <!-- Rodapé -->
     <footer>
         © 2025 Eu amo pastel. Todos os direitos reservados.
     </footer>
 
-</body></html>
+</body>
+</html>
