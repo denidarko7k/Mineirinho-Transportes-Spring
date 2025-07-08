@@ -96,65 +96,71 @@ footer {
     margin-bottom: auto;
 }
 
-.sobre-nos {
+.sobre-nos-hero {
+  position: relative;
   background-image: url('fotochamativa.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 80px 20px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   min-height: 100vh;
-  position: relative;
-}
-
-.sobre-nos::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6); /* === Camada escura por cima da imagem === */
-  z-index: 0;
-}
-
-.texto-glass {
-  position: relative;
-  z-index: 1;
-  max-width: 700px;
-  padding: 40px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
   color: #fff;
 }
 
-.texto-glass h2 {
-  font-size: 2.2rem;
+.sobre-nos-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* === Escurece o fundo === */
+  z-index: 0;
+}
+
+.sobre-nos-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 220px;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.texto-box {
+  max-width: 650px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.texto-box h2 {
+  font-size: 2.5rem;
   color: #fcd34d;
   margin-bottom: 20px;
 }
 
-.texto-glass h3 {
+.texto-box h3 {
   font-size: 1.4rem;
   color: #fbbf24;
   margin-top: 25px;
   margin-bottom: 10px;
 }
 
-.texto-glass p {
+.texto-box p {
   line-height: 1.6;
   margin-bottom: 15px;
 }
 
-.diferenciais {
+.texto-box ul {
   list-style: none;
   padding-left: 0;
   margin-bottom: 20px;
 }
 
-.diferenciais li {
+.texto-box ul li {
   margin-bottom: 8px;
   font-weight: 500;
 }
@@ -171,32 +177,30 @@ footer {
   background-color: #fcd34d;
   color: #000;
   font-weight: bold;
-  text-decoration: none;
   border-radius: 8px;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
+  text-decoration: none;
 }
 
-.btn-cta:hover {
+.cardapio:hover {
   background-color: #fbbf24;
 }
 
 /* === Responsivo === */
 @media (max-width: 768px) {
-  .sobre-nos {
-    padding: 60px 10px;
-    align-items: flex-start;
+  .sobre-nos-container {
+    justify-content: center;
+    padding: 0 20px;
   }
 
-  .texto-glass {
+  .texto-box {
     padding: 30px 20px;
-    width: 100%;
   }
 
-  .texto-glass h2 {
+  .texto-box h2 {
     font-size: 2rem;
   }
 }
+
     </style>
 </head>
 <body>
@@ -212,30 +216,32 @@ footer {
     </nav>
     </header>
 
-<section class="sobre-nos">
-  <div class="texto-glass">
-    <h2>Sobre nós</h2>
-    <p>No <strong>Eu Amo Pastel</strong>, cada mordida conta uma história. Somos apaixonados por sabor, tradição e aquele carinho que só comida feita com amor consegue transmitir.</p>
+<section class="sobre-nos-hero">
+  <div class="sobre-nos-container">
+    <div class="texto-box">
+      <h2>Sobre nós</h2>
+      <p>No <strong>Eu Amo Pastel</strong>, cada mordida conta uma história. Somos apaixonados por sabor, tradição e aquele carinho que só comida feita com amor consegue transmitir.</p>
 
-    <p>Desde o início, nosso propósito é oferecer uma experiência única com <strong>pastéis fresquinhos</strong>, <strong>massas exclusivas</strong>, <strong>caldo de cana natural</strong> e um atendimento que abraça.</p>
+      <p>Desde o início, nosso propósito é oferecer uma experiência única com <strong>pastéis fresquinhos</strong>, <strong>massas exclusivas</strong>, <strong>caldo de cana natural</strong> e um atendimento que abraça.</p>
 
-    <h3>Nossa essência</h3>
-    <p>Trabalhamos com <strong>ingredientes selecionados</strong> e <strong>massas artesanais</strong>, garantindo qualidade e sabor em cada detalhe. Nosso ambiente é acolhedor, familiar e ideal para aproveitar bons momentos com amigos e família.</p>
+      <h3>Nossa essência</h3>
+      <p>Trabalhamos com <strong>ingredientes selecionados</strong> e <strong>massas artesanais</strong>, garantindo qualidade e sabor em cada detalhe. Nosso ambiente é acolhedor, familiar e ideal para aproveitar bons momentos com amigos e família.</p>
 
-    <h3>Diferenciais</h3>
-    <ul class="diferenciais">
-      <li>✅ Pastéis doces e salgados com massa exclusiva</li>
-      <li>🍹 Caldo de cana, açaí e sucos naturais</li>
-      <li>📦 Entrega, retirada e pedidos no local</li>
-      <li>🕕 Funcionamento: terça a domingo, das 18h às 23h</li>
-    </ul>
+      <h3>Diferenciais</h3>
+      <ul>
+        <li>✅ Pastéis doces e salgados com massa exclusiva</li>
+        <li>🍹 Caldo de cana, açaí e sucos naturais</li>
+        <li>📦 Entrega, retirada e pedidos no local</li>
+        <li>🕕 Funcionamento: terça a domingo, das 18h às 23h</li>
+      </ul>
 
-    <h3>Nosso compromisso</h3>
-    <p>Queremos que cada cliente se sinta em casa. Trabalhamos com dedicação todos os dias para entregar <strong>sabor</strong>, <strong>carinho</strong> e um atendimento que faz a diferença.</p>
+      <h3>Nosso compromisso</h3>
+      <p>Queremos que cada cliente se sinta em casa. Trabalhamos com dedicação todos os dias para entregar <strong>sabor</strong>, <strong>carinho</strong> e um atendimento que faz a diferença.</p>
 
-    <p class="final">💛 <strong>Obrigado por fazer parte da nossa história!</strong></p>
+      <p class="final">💛 <strong>Obrigado por fazer parte da nossa história!</strong></p>
 
-    <a href="nossos_produtos.html" class="cardapio">CARDÁPIO</a>
+      <a href="nossos_produtos.html" class="cardapio">CARDÁPIO</a>
+    </div>
   </div>
 </section>
 
